@@ -1,16 +1,16 @@
-name: Jackyxie Docker Image Building
+name: docker image building
 
 on:
   release:
     types: [published]
 jobs:
   push_to_registries:
-    name: Push Docker image to Docker Hub
+    name: Push Docker image
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repo
       uses: actions/checkout@v2
-    - name: Build the Docker image
+    - name: Push to docker hub
       uses: docker/build-push-action@v1
       with:
         name: jackyxie/java-tron
