@@ -1,4 +1,4 @@
-name: docker image building
+name: my ci
 
 on:
   release:
