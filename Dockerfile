@@ -36,6 +36,8 @@ ENV PATH=$PATH:$JAVA_HOME/bin
 
 COPY docker-entrypoint.sh $BASE_DIR/bin
 
+RUN chmod +x $BASE_DIR/bin/docker-entrypoint.sh
+
 WORKDIR $BASE_DIR
 
 ENTRYPOINT ["./bin/docker-entrypoint.sh"]
